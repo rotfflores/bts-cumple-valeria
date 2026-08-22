@@ -5,7 +5,6 @@ export default function Home() {
         <img className="hero-image" src="/bts-birthday-hero.png" alt="Siete personajes frente a un corazón luminoso en un concierto morado" />
         <div className="hero-shade" aria-hidden="true" />
         <div className="invitation-copy">
-          <p className="birthday-kicker">Cumpleaños</p>
           <h1 className="birthday-name">Valeria</h1>
         </div>
       </section>
