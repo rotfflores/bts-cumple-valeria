@@ -1,11 +1,13 @@
 export default function Home() {
   return (
-    <main className="invitation-hero">
-      <div className="hero-shade" aria-hidden="true" />
-      <section className="invitation-copy" aria-labelledby="birthday-title">
+    <main className="invitation-page">
+      <section className="invitation-hero" aria-label="Invitación de cumpleaños de Valeria">
+        <img className="hero-image" src="/bts-birthday-hero.png" alt="Siete personajes frente a un corazón luminoso en un concierto morado" />
+        <div className="hero-shade" aria-hidden="true" />
+        <div className="invitation-copy">
         <p className="bts-mark" aria-label="BTS">&#x25e2;&#x25e3;</p>
-        <h1 id="birthday-title">Cumpleaños</h1>
-        <p className="birthday-name">Valeria</p>
+          <h1 className="birthday-name">Valeria</h1>
+        </div>
       </section>
       <section className="date-card" aria-label="Fecha de la celebración">
         <span className="date-label">Celebremos juntos</span>
