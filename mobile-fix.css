@@ -1,0 +1,24 @@
+.hero-image {
+  display: block;
+  width: 100vw !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
+.date-card {
+  border-color: rgba(255, 255, 255, .38);
+  background: linear-gradient(145deg, rgba(255, 255, 255, .035), rgba(255, 255, 255, .008) 48%, rgba(156, 85, 242, .015));
+  box-shadow: inset 0 1.5px 1px rgba(255, 255, 255, .58), inset 0 -1px 1px rgba(255, 255, 255, .08), 0 18px 50px rgba(0, 0, 30, .38), 0 0 0 1px rgba(255, 255, 255, .06), 0 0 34px rgba(176, 99, 255, .15);
+  backdrop-filter: blur(48px) saturate(190%) brightness(1.06);
+  -webkit-backdrop-filter: blur(48px) saturate(190%) brightness(1.06);
+}
+
+.date-card::before {
+  background: radial-gradient(ellipse at 18% 0, rgba(255, 255, 255, .09), transparent 38%), linear-gradient(115deg, rgba(255, 255, 255, .025), transparent 34%, transparent 70%, rgba(217, 175, 255, .015));
+}
+
+@media (max-width: 760px) {
+  html, body, .invitation-page, .invitation-hero { width: 100%; max-width: 100vw; overflow-x: clip; }
+  .hero-image { width: 100vw !important; max-width: 100vw !important; }
+}
