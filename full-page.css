@@ -90,15 +90,14 @@
   -webkit-background-clip:text;
   background-clip:text;
   -webkit-text-fill-color:transparent;
-  -webkit-text-stroke:.65px rgba(252,246,255,.82);
+  -webkit-text-stroke:.42px rgba(252,246,255,.78);
   text-shadow:
     0 -1px 0 rgba(255,255,255,.72),
     0 1px 0 rgba(69,30,104,.88),
-    0 2px 2px rgba(8,0,28,.62),
-    0 0 7px rgba(184,114,238,.22);
-  filter:drop-shadow(0 3px 3px rgba(8,0,27,.48));
+    0 2px 1px rgba(8,0,28,.58),
+    0 0 5px rgba(184,114,238,.18);
+  filter:drop-shadow(0 2px 2px rgba(8,0,27,.42));
 }
-.intro-copy .crystal-title::before,
 .intro-copy .crystal-title::after {
   content:attr(data-text);
   display:block;
@@ -107,15 +106,6 @@
   pointer-events:none;
   font:inherit;
   letter-spacing:inherit;
-}
-.intro-copy .crystal-title::before {
-  z-index:1;
-  background:linear-gradient(180deg,rgba(255,255,255,.94) 0 12%,rgba(255,255,255,.20) 22%,transparent 46%,rgba(73,27,111,.24) 63%,rgba(255,255,255,.30) 76%,transparent 92%);
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent;
-  -webkit-text-stroke:.22px rgba(255,255,255,.38);
-  text-shadow:0 -1px 0 rgba(255,255,255,.55),0 1px 0 rgba(58,20,91,.5);
 }
 .intro-copy .crystal-title::after {
   z-index:2;
