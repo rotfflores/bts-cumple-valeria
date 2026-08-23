@@ -9,17 +9,27 @@
 .invitation-copy { top: 24.5%; }
 .birthday-name {
   margin: 0;
-  color: #fffaff;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(2.45rem, 8.3vw, 8rem);
+  color: #eadcf4;
+  font-family: 'Bodoni MT', Didot, 'Times New Roman', serif;
+  font-size: clamp(2.35rem, 8.1vw, 7.8rem);
   font-weight: 400;
   line-height: .88;
-  letter-spacing: .09em;
+  letter-spacing: .055em;
   text-transform: uppercase;
-  -webkit-text-stroke: .5px rgba(255, 255, 255, .85);
-  text-shadow: 0 0 2px #fff, 0 0 7px #f5ddff, 0 0 15px #dca5ff, 0 0 30px #a83cff, 0 0 58px #6e16dd;
-  filter: drop-shadow(0 5px 9px rgba(8, 0, 38, .7));
+  -webkit-text-stroke: .35px rgba(255, 255, 255, .72);
+  background: linear-gradient(180deg, #fff 0%, #d9c5e7 22%, #fff 42%, #9d7bb2 68%, #f5eaff 87%, #b99dcc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 0 rgba(255,255,255,.8), 0 3px 3px rgba(20,0,45,.7), 0 0 10px rgba(225,186,255,.38);
+  filter: drop-shadow(0 5px 7px rgba(8, 0, 38, .65));
 }
+
+.date-card--hero { position:absolute; z-index:3; left:50%; bottom:2.5%; width:min(44%,39rem); min-width:20rem; margin:0; padding:clamp(.42rem,.8vw,.72rem) clamp(.9rem,2vw,1.8rem); transform:translateX(-50%); border:1px solid rgba(255,255,255,.55); border-radius:999px; background:linear-gradient(180deg,rgba(37,18,62,.38),rgba(10,3,32,.5)); box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.18),0 0 0 3px rgba(15,3,44,.4),0 0 0 4px rgba(255,255,255,.18),0 4px 18px rgba(4,0,26,.72); backdrop-filter:blur(10px) saturate(120%); -webkit-backdrop-filter:blur(10px) saturate(120%); }
+.date-card--hero::before { background:linear-gradient(180deg,rgba(255,255,255,.1),transparent 48%); }
+.date-card--hero::after { inset:2px 8% auto; opacity:.5; }
+.date-card--hero time { display:flex; align-items:center; justify-content:center; gap:clamp(.55rem,1.5vw,1.25rem); color:#f3eaf8; font-family:'Bodoni MT',Didot,'Times New Roman',serif; font-size:clamp(.78rem,1.6vw,1.45rem); line-height:1; letter-spacing:.12em; text-transform:uppercase; text-shadow:0 1px 2px #100020,0 0 8px rgba(220,177,255,.38); }
+.date-card--hero i { color:#fff; font-size:.55em; font-style:normal; text-shadow:0 0 7px #d28cff; }
 
 .date-card {
   border-color: rgba(255, 255, 255, .38);
@@ -37,4 +47,6 @@
   html, body, .invitation-page, .invitation-hero { width: 100%; max-width: 100vw; overflow-x: clip; }
   .hero-image { width: 100vw !important; max-width: 100vw !important; }
   .invitation-copy { top: 24.5%; }
+  .date-card--hero { bottom:2.8%; width:82%; min-width:0; padding:.36rem .65rem; }
+  .date-card--hero time { gap:.55rem; font-size:clamp(.65rem,3vw,.88rem); letter-spacing:.09em; }
 }

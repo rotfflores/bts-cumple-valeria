@@ -7,13 +7,11 @@ export default function Home() {
         <div className="invitation-copy">
           <h1 className="birthday-name">Valeria</h1>
         </div>
-      </section>
-      <section className="date-card" aria-label="Fecha de la celebración">
-        <span className="date-label">Celebremos juntos</span>
-        <time dateTime="2026-11-14">
-          <strong>14</strong><span className="date-divider" aria-hidden="true" />
-          <span className="date-month">Noviembre</span><span className="date-year">2026</span>
-        </time>
+        <section className="date-card date-card--hero" aria-label="Fecha de la celebración">
+          <time dateTime="2026-11-14">
+            <span>14</span><i aria-hidden="true">•</i><span>Noviembre</span><i aria-hidden="true">•</i><span>2026</span>
+          </time>
+        </section>
       </section>
     </main>
   );
