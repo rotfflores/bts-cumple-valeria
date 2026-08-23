@@ -8,6 +8,7 @@
     <title>Cumpleaños de Valeria</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mobile-fix.css" />
+    <link rel="stylesheet" href="full-page.css" />
   </head>
   <body>
     <main class="invitation-page">
@@ -23,6 +24,91 @@
           </time>
         </section>
       </section>
+
+      <div class="content-shell">
+        <section class="glass-card intro-card">
+          <div class="magic-door" aria-hidden="true"><span></span></div>
+          <div class="intro-copy">
+            <p class="eyebrow">Hoy comienza</p>
+            <h2>Una nueva era</h2>
+            <span class="ornament">── ♥ ──</span>
+            <p>Quiero compartir contigo una noche llena de música, sueños y momentos inolvidables.</p>
+          </div>
+        </section>
+
+        <section class="glass-card countdown-card" aria-label="Cuenta regresiva">
+          <h2><span>✦</span> Faltan <span>✦</span></h2>
+          <div class="countdown" id="countdown">
+            <div><strong id="days">00</strong><span>Días</span></div>
+            <div><strong id="hours">00</strong><span>Horas</span></div>
+            <div><strong id="minutes">00</strong><span>Min</span></div>
+          </div>
+        </section>
+
+        <section class="glass-card music-card">
+          <h2>♥ &nbsp; Dale play a nuestra canción &nbsp; ♥</h2>
+          <div class="music-player">
+            <div class="album-heart" aria-hidden="true">♥</div>
+            <div class="player-controls">
+              <div class="track"><span></span></div>
+              <div class="buttons"><button aria-label="Anterior">◀</button><button class="play" id="playButton" aria-label="Reproducir">▶</button><button aria-label="Siguiente">▶</button></div>
+            </div>
+            <span class="floating-heart" aria-hidden="true">♥</span>
+          </div>
+        </section>
+
+        <section class="glass-card gallery-card">
+          <h2>♥ &nbsp; Mis momentos favoritos &nbsp; ♥</h2>
+          <div class="gallery-grid">
+            <div class="gallery-scene curtains" aria-label="Escena violeta con cortinas"><span>✦</span></div>
+            <div class="gallery-scene heart-stage" aria-label="Corazón de neón"><span>♡</span></div>
+            <div class="gallery-scene candles" aria-label="Noche elegante con velas"><span>♨</span></div>
+          </div>
+          <div class="gallery-dots"><b></b><b class="active"></b><b></b></div>
+        </section>
+
+        <section class="glass-card itinerary-card">
+          <h2>✦ &nbsp; Itinerario &nbsp; ✦</h2>
+          <div class="timeline">
+            <div><i>♡</i><strong>7:00 PM</strong><span>Recepción</span></div>
+            <div><i>◒</i><strong>8:00 PM</strong><span>Cena</span></div>
+            <div><i>♕</i><strong>9:00 PM</strong><span>Vals</span></div>
+            <div><i>✦</i><strong>10:00 PM</strong><span>Fiesta</span></div>
+          </div>
+        </section>
+
+        <div class="info-grid">
+          <section class="glass-card mini-card dress-card">
+            <div class="line-icon" aria-hidden="true">♦</div>
+            <div><h2>Dress code</h2><p>Elegante •<br />Tonos negro, blanco o morado</p></div>
+          </section>
+          <section class="glass-card mini-card venue-card">
+            <div><h2>Ceremonia</h2><p>Salón Moonlight • 7:00 PM</p><a class="pill-button" href="https://maps.google.com" target="_blank" rel="noreferrer">● &nbsp; Ver ubicación</a></div>
+            <div class="moon" aria-hidden="true">☾</div>
+          </section>
+          <section class="glass-card mini-card gift-card">
+            <div class="gift" aria-hidden="true">▣</div>
+            <div><h2>Mesa de regalos</h2><p>Tu presencia es mi mejor regalo</p><span>♥</span></div>
+          </section>
+          <section class="glass-card mini-card song-card">
+            <h2>¿Qué canción no puede faltar?</h2>
+            <form id="songForm"><label><span class="sr-only">Nombre de la canción</span><input id="songInput" placeholder="Escribe tu canción aquí..." /></label><button class="pill-button" type="submit">Enviar canción &nbsp; ♥</button><small id="songStatus" role="status"></small></form>
+          </section>
+        </div>
+
+        <section class="glass-card rsvp-card">
+          <div class="envelope" aria-hidden="true">✉</div>
+          <div><p>Confirma tu asistencia</p><h2>RSVP</h2><button class="pill-button" id="rsvpButton">Confirmar asistencia &nbsp; ♥</button><small id="rsvpStatus" role="status"></small></div>
+        </section>
+
+        <footer class="invitation-footer">
+          <div class="sparkle-row">✦ ✦ ✦ ✦ ✦ ✦ ✦</div>
+          <p>Gracias por ser parte de este<br />momento tan especial</p>
+          <strong>I purple you</strong>
+          <span>─── ♡ ───</span>
+        </footer>
+      </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
