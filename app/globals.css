@@ -45,4 +45,4 @@ body { background: #080225; color: var(--ivory); font-family: Georgia, 'Times Ne
 .date-card--hero::after { inset:2px 8% auto; opacity:.5; }
 .date-card--hero time { display:flex; align-items:center; justify-content:center; gap:clamp(.55rem,1.5vw,1.25rem); color:#f3eaf8; font-family:'Bodoni MT',Didot,'Times New Roman',serif; font-size:clamp(.78rem,1.6vw,1.45rem); line-height:1; letter-spacing:.12em; text-transform:uppercase; text-shadow:0 1px 2px #100020,0 0 8px rgba(220,177,255,.38); }
 .date-card--hero i { color:#fff; font-size:.55em; font-style:normal; text-shadow:0 0 7px #d28cff; }
-@media(max-width:760px){.date-card--hero{bottom:2.8%;width:82%;min-width:0;padding:.36rem .65rem}.date-card--hero time{gap:.55rem;font-size:clamp(.65rem,3vw,.88rem);letter-spacing:.09em}}
+@media(max-width:760px){.date-card--hero{bottom:2.8%;width:44%;min-width:0;padding:.2rem .35rem}.date-card--hero::after{inset:2px 20% auto}.date-card--hero time{gap:.3rem;font-size:clamp(.5rem,2.25vw,.68rem);letter-spacing:.055em}}

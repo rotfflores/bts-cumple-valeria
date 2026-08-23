@@ -54,6 +54,7 @@
   html, body, .invitation-page, .invitation-hero { width: 100%; max-width: 100vw; overflow-x: clip; }
   .hero-image { width: 100vw !important; max-width: 100vw !important; }
   .invitation-copy { top: 24.5%; }
-  .date-card--hero { bottom:2.8%; width:82%; min-width:0; padding:.36rem .65rem; }
-  .date-card--hero time { gap:.55rem; font-size:clamp(.65rem,3vw,.88rem); letter-spacing:.09em; }
+  .date-card--hero { bottom:2.8%; width:44%; min-width:0; padding:.2rem .35rem; }
+  .date-card--hero::after { inset:2px 20% auto; }
+  .date-card--hero time { gap:.3rem; font-size:clamp(.5rem,2.25vw,.68rem); letter-spacing:.055em; }
 }
