@@ -6,6 +6,11 @@
   object-fit: contain;
 }
 
+/* Final high-specificity glass treatment for the reference date capsule. */
+.date-card.date-card--hero { background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(12,3,34,.2)); border-color:rgba(255,255,255,.48); backdrop-filter:blur(7px) saturate(115%); -webkit-backdrop-filter:blur(7px) saturate(115%); }
+.date-card.date-card--hero::before { background:linear-gradient(180deg,rgba(255,255,255,.1),transparent 48%); }
+.date-card.date-card--hero time { display:flex; align-items:center; justify-content:center; }
+
 .invitation-copy { top: 24.5%; }
 .birthday-name {
   margin: 0;
@@ -17,15 +22,17 @@
   letter-spacing: .055em;
   text-transform: uppercase;
   -webkit-text-stroke: .35px rgba(255, 255, 255, .72);
-  background: linear-gradient(180deg, #fff 0%, #d9c5e7 22%, #fff 42%, #9d7bb2 68%, #f5eaff 87%, #b99dcc 100%);
+  background-image: linear-gradient(112deg, transparent 0 13%, rgba(255,255,255,.95) 20%, rgba(127,91,151,.55) 28%, transparent 36% 58%, rgba(255,255,255,.82) 66%, rgba(111,73,139,.48) 76%, transparent 86%), linear-gradient(180deg, #fff 0%, #cbb7d9 18%, #fff 38%, #8f6aa5 63%, #f8efff 82%, #a989bd 100%);
+  background-size: 190% 100%, 100% 100%;
+  background-position: 50% 0, 0 0;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 1px 0 rgba(255,255,255,.8), 0 3px 3px rgba(20,0,45,.7), 0 0 10px rgba(225,186,255,.38);
+  text-shadow: 0 -1px 0 rgba(255,255,255,.88), 1px 0 0 rgba(255,255,255,.35), -1px 0 0 rgba(78,43,102,.45), 0 3px 3px rgba(20,0,45,.72), 0 0 9px rgba(225,186,255,.28);
   filter: drop-shadow(0 5px 7px rgba(8, 0, 38, .65));
 }
 
-.date-card--hero { position:absolute; z-index:3; left:50%; bottom:2.5%; width:min(44%,39rem); min-width:20rem; margin:0; padding:clamp(.42rem,.8vw,.72rem) clamp(.9rem,2vw,1.8rem); transform:translateX(-50%); border:1px solid rgba(255,255,255,.55); border-radius:999px; background:linear-gradient(180deg,rgba(37,18,62,.38),rgba(10,3,32,.5)); box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.18),0 0 0 3px rgba(15,3,44,.4),0 0 0 4px rgba(255,255,255,.18),0 4px 18px rgba(4,0,26,.72); backdrop-filter:blur(10px) saturate(120%); -webkit-backdrop-filter:blur(10px) saturate(120%); }
+.date-card--hero { position:absolute; z-index:3; left:50%; bottom:2.5%; width:min(44%,39rem); min-width:20rem; margin:0; padding:clamp(.42rem,.8vw,.72rem) clamp(.9rem,2vw,1.8rem); transform:translateX(-50%); border:1px solid rgba(255,255,255,.48); border-radius:999px; background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(12,3,34,.2)); box-shadow:inset 0 1px 0 rgba(255,255,255,.48),inset 0 -1px 0 rgba(255,255,255,.12),0 0 0 3px rgba(15,3,44,.22),0 0 0 4px rgba(255,255,255,.14),0 4px 16px rgba(4,0,26,.48); backdrop-filter:blur(7px) saturate(115%); -webkit-backdrop-filter:blur(7px) saturate(115%); }
 .date-card--hero::before { background:linear-gradient(180deg,rgba(255,255,255,.1),transparent 48%); }
 .date-card--hero::after { inset:2px 8% auto; opacity:.5; }
 .date-card--hero time { display:flex; align-items:center; justify-content:center; gap:clamp(.55rem,1.5vw,1.25rem); color:#f3eaf8; font-family:'Bodoni MT',Didot,'Times New Roman',serif; font-size:clamp(.78rem,1.6vw,1.45rem); line-height:1; letter-spacing:.12em; text-transform:uppercase; text-shadow:0 1px 2px #100020,0 0 8px rgba(220,177,255,.38); }
