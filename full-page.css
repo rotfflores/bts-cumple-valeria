@@ -79,3 +79,59 @@
 .intro-copy .eyebrow,.intro-copy h2 { color:rgba(249,241,255,.12); background:none; -webkit-background-clip:initial; background-clip:initial; -webkit-text-fill-color:rgba(249,241,255,.10); -webkit-text-stroke:.32px rgba(255,255,255,.68); text-shadow:0 1px 0 rgba(255,255,255,.38),0 -1px 0 rgba(78,42,103,.45),0 2px 4px rgba(8,0,26,.72),0 0 7px rgba(218,170,255,.25); filter:drop-shadow(0 0 4px rgba(205,133,255,.22)); }
 .intro-copy .eyebrow::after,.intro-copy h2::after,.intro-copy p::before,.intro-copy p::after { display:none; }
 .ornament::before,.ornament::after { content:none; }
+
+/* Faceted glass typography: translucent body, carved rim and moving reflection. */
+.intro-copy .crystal-title {
+  isolation:isolate;
+  overflow:hidden;
+  color:transparent;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.34) 15%,rgba(226,202,255,.22) 42%,rgba(131,76,183,.38) 67%,rgba(246,235,255,.62) 84%,rgba(161,103,212,.28) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  -webkit-text-stroke:.65px rgba(252,246,255,.82);
+  text-shadow:
+    0 -1px 0 rgba(255,255,255,.72),
+    0 1px 0 rgba(69,30,104,.88),
+    0 2px 2px rgba(8,0,28,.62),
+    0 0 7px rgba(184,114,238,.22);
+  filter:drop-shadow(0 3px 3px rgba(8,0,27,.48));
+}
+.intro-copy .crystal-title::before,
+.intro-copy .crystal-title::after {
+  content:attr(data-text);
+  display:block;
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  font:inherit;
+  letter-spacing:inherit;
+}
+.intro-copy .crystal-title::before {
+  z-index:1;
+  background:linear-gradient(180deg,rgba(255,255,255,.94) 0 12%,rgba(255,255,255,.20) 22%,transparent 46%,rgba(73,27,111,.24) 63%,rgba(255,255,255,.30) 76%,transparent 92%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  -webkit-text-stroke:.22px rgba(255,255,255,.38);
+  text-shadow:0 -1px 0 rgba(255,255,255,.55),0 1px 0 rgba(58,20,91,.5);
+}
+.intro-copy .crystal-title::after {
+  z-index:2;
+  background:linear-gradient(108deg,transparent 0 40%,rgba(255,255,255,.08) 44%,rgba(255,255,255,.94) 49%,rgba(238,211,255,.32) 53%,transparent 59% 100%);
+  background-size:260% 100%;
+  background-position:145% 0;
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  -webkit-text-stroke:0 transparent;
+  animation:crystal-sweep 7.5s ease-in-out infinite;
+}
+@keyframes crystal-sweep {
+  0%,18% { background-position:145% 0; opacity:0; }
+  25% { opacity:.9; }
+  62% { opacity:.9; }
+  72%,100% { background-position:-75% 0; opacity:0; }
+}
+@media(prefers-reduced-motion:reduce){.intro-copy .crystal-title::after{animation:none;opacity:.35;background-position:50% 0}}
