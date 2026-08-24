@@ -64,8 +64,24 @@ document.querySelector('#songForm').addEventListener('submit', (event) => {
   document.querySelector('#songStatus').textContent = value ? '¡Canción guardada! ♥' : 'Escribe una canción primero.';
 });
 
-document.querySelector('#rsvpButton').addEventListener('click', () => {
-  document.querySelector('#rsvpStatus').textContent = '¡Gracias! Tu confirmación quedó registrada ♥';
+const rsvpCard = document.querySelector('.rsvp-card');
+const rsvpButton = document.querySelector('#rsvpButton');
+const rsvpForm = document.querySelector('#rsvpForm');
+const rsvpStatus = document.querySelector('#rsvpStatus');
+
+rsvpButton.addEventListener('click', () => {
+  const expanded = rsvpCard.classList.toggle('is-expanded');
+  rsvpButton.setAttribute('aria-expanded', String(expanded));
+  rsvpButton.querySelector('span').textContent = expanded ? 'Cerrar formulario' : 'Confirmar asistencia';
+  rsvpStatus.textContent = '';
+  if (expanded) setTimeout(() => document.querySelector('#guestName').focus(), 360);
+});
+
+rsvpForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const name = document.querySelector('#guestName').value.trim();
+  const response = document.querySelector('#attendance').value;
+  rsvpStatus.textContent = name ? `¡Gracias, ${name}! Registramos: ${response} ♥` : 'Escribe tu nombre para confirmar.';
 });
 
 const galleryLightbox = document.querySelector('#galleryLightbox');

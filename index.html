@@ -8,7 +8,7 @@
     <title>Cumpleaños de Valeria</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mobile-fix.css?v=20260824-ios-overflow-fix" />
-    <link rel="stylesheet" href="full-page.css?v=20260824-ceremony-gifts-glass98" />
+    <link rel="stylesheet" href="full-page.css?v=20260824-song-rsvp-glass98" />
   </head>
   <body>
     <main class="invitation-page">
@@ -86,7 +86,7 @@
             <div class="ceremony-visual" aria-hidden="true"><img src="public/ceremony-moon.png" alt="" /></div>
           </section>
           <section class="glass-card mini-card gift-card">
-            <div class="gift-visual" aria-hidden="true"><img src="public/gift-glass-icon.png" alt="" /></div>
+            <div class="gift-visual" aria-hidden="true"><img src="public/gift-purple-box.png" alt="" /></div>
             <div><h2>Mesa de regalos</h2><p>Tu presencia es mi mejor regalo</p><span>♥</span></div>
           </section>
           <section class="glass-card mini-card song-card">
@@ -97,7 +97,7 @@
 
         <section class="glass-card rsvp-card">
           <div class="envelope" aria-hidden="true">✉</div>
-          <div><p>Confirma tu asistencia</p><h2>RSVP</h2><button class="pill-button" id="rsvpButton">Confirmar asistencia &nbsp; ♥</button><small id="rsvpStatus" role="status"></small></div>
+          <div class="rsvp-content"><p>Confirma tu asistencia</p><h2>RSVP</h2><button class="pill-button rsvp-toggle" id="rsvpButton" type="button" aria-expanded="false" aria-controls="rsvpFormPanel"><span>Confirmar asistencia</span><b aria-hidden="true">♥</b></button><div class="rsvp-form-panel" id="rsvpFormPanel"><form id="rsvpForm"><label>Nombre completo<input id="guestName" name="guestName" autocomplete="name" required placeholder="Escribe tu nombre" /></label><div class="rsvp-fields"><label>Asistencia<select id="attendance" name="attendance"><option value="Sí asistiré">Sí asistiré</option><option value="No podré asistir">No podré asistir</option></select></label><label>Invitados<input id="guestCount" name="guestCount" type="number" min="1" max="10" value="1" /></label></div><button class="pill-button rsvp-submit" type="submit">Enviar confirmación &nbsp; ♥</button></form></div><small id="rsvpStatus" role="status"></small></div>
         </section>
 
         <footer class="invitation-footer">
@@ -112,6 +112,6 @@
       <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar imagen">×</button>
       <img id="lightboxImage" src="" alt="" />
     </div>
-    <script src="script.js?v=20260824-gallery-lightbox"></script>
+    <script src="script.js?v=20260824-rsvp-form"></script>
   </body>
 </html>
