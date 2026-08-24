@@ -116,14 +116,20 @@
 
 /* Solid portal with a soft atmospheric dissolve at both lower corners. */
 .portal-image {
+  width:132%;
+  max-width:none;
   height:auto;
   min-height:0;
   object-fit:contain;
+  object-position:left bottom;
+  justify-self:start;
+  align-self:end;
+  transform-origin:left bottom;
   opacity:1;
   mix-blend-mode:normal;
   filter:none;
   -webkit-mask-image:none;
   mask-image:none;
 }
-.magic-door { background:transparent; }
-@media(max-width:640px){.portal-image{height:auto;min-height:0;object-fit:contain}}
+.magic-door { place-items:end start; background:transparent; }
+@media(max-width:640px){.portal-image{width:138%;height:auto;min-height:0;object-fit:contain;object-position:left bottom}}
