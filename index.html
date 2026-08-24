@@ -8,7 +8,7 @@
     <title>Cumpleaños de Valeria</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mobile-fix.css" />
-    <link rel="stylesheet" href="full-page.css?v=20260824-countdown-glass70" />
+    <link rel="stylesheet" href="full-page.css?v=20260824-audio-player" />
   </head>
   <body>
     <main class="invitation-page">
@@ -29,7 +29,7 @@
         <section class="glass-card intro-card">
           <div class="magic-door"><img class="portal-image" src="public/portal-door-transparent.png" alt="Puerta luminosa violeta entre nubes" /></div>
           <div class="intro-copy">
-            <img class="intro-psd-title" src="public/intro-psd-title-v5-serif.png" alt="Hoy comienza una nueva historia" />
+            <img class="intro-psd-title" src="public/intro-title-provided.png" alt="Hoy comienza una nueva era" />
             <span class="ornament" aria-hidden="true">♥</span>
             <p>Quiero compartir contigo una noche llena de música, sueños y momentos inolvidables.</p>
           </div>
@@ -49,11 +49,12 @@
           <div class="music-player">
             <div class="album-heart" aria-hidden="true">♥</div>
             <div class="player-controls">
-              <div class="track"><span></span></div>
-              <div class="buttons"><button aria-label="Anterior">◀</button><button class="play" id="playButton" aria-label="Reproducir">▶</button><button aria-label="Siguiente">▶</button></div>
+              <input class="track" id="audioProgress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Progreso de la canción" />
+              <div class="buttons"><button id="restartButton" aria-label="Reiniciar canción">◀</button><button class="play" id="playButton" aria-label="Reproducir">▶</button><button id="forwardButton" aria-label="Adelantar diez segundos">▶</button></div>
             </div>
             <span class="floating-heart" aria-hidden="true">♥</span>
           </div>
+          <audio id="birthdayAudio" preload="metadata" src="public/boy-with-luv-bts-halsey.mp3"></audio>
         </section>
 
         <section class="glass-card gallery-card">
@@ -108,6 +109,6 @@
         </footer>
       </div>
     </main>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260824-audio-player"></script>
   </body>
 </html>

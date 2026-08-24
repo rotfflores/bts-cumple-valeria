@@ -11,11 +11,51 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 60000);
 
-document.querySelector('#playButton').addEventListener('click', (event) => {
-  const playing = event.currentTarget.dataset.playing === 'true';
-  event.currentTarget.dataset.playing = String(!playing);
-  event.currentTarget.textContent = playing ? '▶' : '❚❚';
-  event.currentTarget.setAttribute('aria-label', playing ? 'Reproducir' : 'Pausar');
+const audio = document.querySelector('#birthdayAudio');
+const playButton = document.querySelector('#playButton');
+const audioProgress = document.querySelector('#audioProgress');
+
+function renderAudioProgress() {
+  const progress = Number.isFinite(audio.duration) && audio.duration > 0 ? (audio.currentTime / audio.duration) * 100 : 0;
+  audioProgress.value = String(progress);
+  audioProgress.style.setProperty('--progress', `${progress}%`);
+}
+
+playButton.addEventListener('click', async () => {
+  if (audio.paused) {
+    await audio.play();
+  } else {
+    audio.pause();
+  }
+});
+
+audio.addEventListener('play', () => {
+  playButton.textContent = '❚❚';
+  playButton.setAttribute('aria-label', 'Pausar');
+});
+
+audio.addEventListener('pause', () => {
+  playButton.textContent = '▶';
+  playButton.setAttribute('aria-label', 'Reproducir');
+});
+
+audio.addEventListener('timeupdate', renderAudioProgress);
+audio.addEventListener('loadedmetadata', renderAudioProgress);
+audio.addEventListener('ended', renderAudioProgress);
+
+audioProgress.addEventListener('input', () => {
+  if (Number.isFinite(audio.duration)) audio.currentTime = (Number(audioProgress.value) / 100) * audio.duration;
+  renderAudioProgress();
+});
+
+document.querySelector('#restartButton').addEventListener('click', () => {
+  audio.currentTime = 0;
+  renderAudioProgress();
+});
+
+document.querySelector('#forwardButton').addEventListener('click', () => {
+  if (Number.isFinite(audio.duration)) audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+  renderAudioProgress();
 });
 
 document.querySelector('#songForm').addEventListener('submit', (event) => {
