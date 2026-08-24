@@ -212,13 +212,33 @@ body.lightbox-open { overflow:hidden; }
 
 /* Dress code inherits the itinerary's 98% crystal treatment. */
 .dress-card { border-color:rgba(242,218,255,.72); background:linear-gradient(145deg,rgba(111,53,166,.98),rgba(28,7,65,.98) 42%,rgba(12,3,41,.98)); box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 0 16px rgba(207,142,255,.12),0 0 0 1px rgba(216,169,255,.15),0 0 10px rgba(217,151,255,.36),0 0 24px rgba(146,65,224,.20),0 14px 35px rgba(2,0,20,.38); backdrop-filter:blur(14px) saturate(135%); -webkit-backdrop-filter:blur(14px) saturate(135%); }
+.dress-card { grid-template-columns:minmax(0,42%) minmax(0,1fr); column-gap:.7rem; }
+.dress-card>div:last-child { position:relative; z-index:1; min-width:0; }
 .dress-code-visual { display:grid; place-items:center; align-self:stretch; min-width:0; overflow:hidden; }
-.dress-code-visual img { display:block; width:100%; height:100%; max-height:140px; object-fit:contain; filter:drop-shadow(0 0 8px rgba(188,82,255,.46)); }
+.dress-code-visual img { display:block; width:88%; height:100%; max-height:140px; object-fit:contain; filter:drop-shadow(0 0 8px rgba(188,82,255,.46)); }
 .dress-card h2,.dress-card p { color:#e7c8ff; font-family:'Bodoni MT',Didot,Georgia,serif; font-weight:400; text-shadow:0 0 7px rgba(204,111,255,.55); }
 .dress-card h2 { letter-spacing:.11em; text-transform:uppercase; }
 .dress-card p { letter-spacing:.035em; }
 @media(max-width:640px){.dress-code-visual img{max-height:112px}.dress-card h2{letter-spacing:.07em}}
 @media(max-width:420px){.dress-code-visual img{max-height:88px}}
+
+/* Ceremony and gifts match the 98% crystal system. */
+.venue-card,.gift-card { border-color:rgba(242,218,255,.72); background:linear-gradient(145deg,rgba(111,53,166,.98),rgba(28,7,65,.98) 42%,rgba(12,3,41,.98)); box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 0 16px rgba(207,142,255,.12),0 0 0 1px rgba(216,169,255,.15),0 0 10px rgba(217,151,255,.36),0 0 24px rgba(146,65,224,.20),0 14px 35px rgba(2,0,20,.38); backdrop-filter:blur(14px) saturate(135%); -webkit-backdrop-filter:blur(14px) saturate(135%); }
+.venue-card h2,.venue-card p,.gift-card h2,.gift-card p { color:#e7c8ff; font-family:'Bodoni MT',Didot,Georgia,serif; font-weight:400; text-shadow:0 0 7px rgba(204,111,255,.55); }
+.venue-card h2,.gift-card h2 { letter-spacing:.1em; text-transform:uppercase; }
+.venue-card p,.gift-card p { letter-spacing:.025em; }
+.venue-card { grid-template-columns:minmax(0,62%) minmax(0,38%); overflow:hidden; }
+.ceremony-visual { display:grid; place-items:end center; align-self:stretch; min-width:0; }
+.ceremony-visual img { display:block; width:132%; max-width:none; height:100%; object-fit:contain; filter:drop-shadow(0 0 9px rgba(191,84,255,.48)); }
+.venue-button { display:inline-flex; align-items:center; justify-content:center; gap:.35rem; position:relative; overflow:hidden; border:1px solid rgba(246,225,255,.74); background:linear-gradient(135deg,rgba(255,255,255,.34),rgba(198,120,255,.48) 40%,rgba(108,35,188,.68)); box-shadow:inset 0 1px 0 rgba(255,255,255,.78),inset 0 -1px 0 rgba(79,18,129,.55),0 0 10px rgba(207,122,255,.48),0 6px 16px rgba(4,0,25,.32); color:#fff8ff; letter-spacing:.08em; text-shadow:0 0 6px rgba(255,255,255,.65); transition:transform .25s ease,box-shadow .25s ease; }
+.venue-button::after { content:''; position:absolute; inset:-100% auto -100% -35%; width:28%; transform:rotate(18deg); background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent); transition:left .55s ease; }
+.venue-button:hover,.venue-button:focus-visible { transform:translateY(-2px); box-shadow:inset 0 1px 0 rgba(255,255,255,.85),0 0 15px rgba(220,151,255,.72),0 9px 20px rgba(4,0,25,.4); outline:none; }
+.venue-button:hover::after,.venue-button:focus-visible::after { left:110%; }
+.gift-card { grid-template-columns:minmax(0,43%) minmax(0,1fr); column-gap:.35rem; overflow:hidden; }
+.gift-visual { position:relative; display:grid; place-items:center; align-self:stretch; min-width:0; }
+.gift-visual img { position:relative; z-index:1; display:block; width:90%; height:82%; object-fit:contain; filter:drop-shadow(0 0 8px rgba(193,91,255,.5)); }
+.gift-visual::after { content:''; position:absolute; z-index:0; left:12%; right:12%; bottom:3%; height:30%; background:url('public/gift-glass-icon.png') center bottom/contain no-repeat; transform:scaleY(-.34); transform-origin:center bottom; opacity:.2; filter:blur(1.2px); -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.6),transparent 78%); mask-image:linear-gradient(to bottom,rgba(0,0,0,.6),transparent 78%); }
+@media(max-width:640px){.dress-card{column-gap:.35rem}.ceremony-visual img{width:125%}.venue-button{font-size:.52rem;padding:.42rem .55rem}.gift-visual img{width:94%}}
 .music-heading { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:.55rem; }
 .music-heart { display:flex; align-items:center; gap:.42rem; color:#f6dcff; text-shadow:0 0 3px rgba(255,255,255,.65),0 0 8px rgba(198,91,255,.52); }
 .music-heart--left { justify-content:flex-end; }
