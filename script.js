@@ -67,12 +67,16 @@ document.querySelector('#songForm').addEventListener('submit', (event) => {
 const rsvpCard = document.querySelector('.rsvp-card');
 const rsvpButton = document.querySelector('#rsvpButton');
 const rsvpForm = document.querySelector('#rsvpForm');
+const rsvpFormPanel = document.querySelector('#rsvpFormPanel');
 const rsvpStatus = document.querySelector('#rsvpStatus');
 
 rsvpButton.addEventListener('click', () => {
   const expanded = rsvpCard.classList.toggle('is-expanded');
   rsvpButton.setAttribute('aria-expanded', String(expanded));
   rsvpButton.querySelector('span').textContent = expanded ? 'Cerrar formulario' : 'Confirmar asistencia';
+  rsvpFormPanel.style.maxHeight = expanded ? `${rsvpFormPanel.scrollHeight}px` : '0px';
+  rsvpFormPanel.style.opacity = expanded ? '1' : '0';
+  rsvpFormPanel.style.transform = expanded ? 'translateY(0)' : 'translateY(-10px)';
   rsvpStatus.textContent = '';
   if (expanded) setTimeout(() => document.querySelector('#guestName').focus(), 360);
 });
