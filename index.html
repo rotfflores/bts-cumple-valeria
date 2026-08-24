@@ -8,7 +8,7 @@
     <title>Cumpleaños de Valeria</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mobile-fix.css" />
-    <link rel="stylesheet" href="full-page.css?v=20260824-audio-player" />
+    <link rel="stylesheet" href="full-page.css?v=20260824-player-assets" />
   </head>
   <body>
     <main class="invitation-page">
@@ -29,7 +29,7 @@
         <section class="glass-card intro-card">
           <div class="magic-door"><img class="portal-image" src="public/portal-door-transparent.png" alt="Puerta luminosa violeta entre nubes" /></div>
           <div class="intro-copy">
-            <img class="intro-psd-title" src="public/intro-title-provided.png" alt="Hoy comienza una nueva era" />
+            <div class="intro-number-title" aria-label="Hoy comienza una nueva era"><span>Hoy comienza</span><strong>Una nueva era</strong></div>
             <span class="ornament" aria-hidden="true">♥</span>
             <p>Quiero compartir contigo una noche llena de música, sueños y momentos inolvidables.</p>
           </div>
@@ -45,12 +45,12 @@
         </section>
 
         <section class="glass-card music-card">
-          <h2>♥ &nbsp; Dale play a nuestra canción &nbsp; ♥</h2>
+          <h2 class="music-heading"><span class="music-heart music-heart--left">♥</span><span>Dale play a nuestra canción</span><span class="music-heart music-heart--right">♥</span></h2>
           <div class="music-player">
-            <div class="album-heart" aria-hidden="true">♥</div>
+            <div class="album-heart" aria-hidden="true"><img src="public/player-heart.png" alt="" /></div>
             <div class="player-controls">
               <input class="track" id="audioProgress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Progreso de la canción" />
-              <div class="buttons"><button id="restartButton" aria-label="Reiniciar canción">◀</button><button class="play" id="playButton" aria-label="Reproducir">▶</button><button id="forwardButton" aria-label="Adelantar diez segundos">▶</button></div>
+              <div class="buttons"><button class="skip skip--back" id="restartButton" aria-label="Reiniciar canción"><img src="public/player-skip.png" alt="" /></button><button class="play" id="playButton" aria-label="Reproducir"><img src="public/player-play.png" alt="" /></button><button class="skip" id="forwardButton" aria-label="Adelantar diez segundos"><img src="public/player-skip.png" alt="" /></button></div>
             </div>
             <span class="floating-heart" aria-hidden="true">♥</span>
           </div>
@@ -109,6 +109,6 @@
         </footer>
       </div>
     </main>
-    <script src="script.js?v=20260824-audio-player"></script>
+    <script src="script.js?v=20260824-player-assets"></script>
   </body>
 </html>

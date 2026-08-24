@@ -30,12 +30,12 @@ playButton.addEventListener('click', async () => {
 });
 
 audio.addEventListener('play', () => {
-  playButton.textContent = '❚❚';
+  playButton.classList.add('is-playing');
   playButton.setAttribute('aria-label', 'Pausar');
 });
 
 audio.addEventListener('pause', () => {
-  playButton.textContent = '▶';
+  playButton.classList.remove('is-playing');
   playButton.setAttribute('aria-label', 'Reproducir');
 });
 

@@ -149,6 +149,12 @@
 .intro-copy > p { align-self:center; margin:0 auto; padding:0; max-width:31ch; color:#f7effc; font-family:Georgia,'Times New Roman',serif; font-size:clamp(.8rem,1.9vw,1.12rem); font-weight:500; line-height:1.48; letter-spacing:.018em; text-wrap:balance; text-shadow:0 1px 1px rgba(7,0,24,.72); }
 @media(max-width:640px){.intro-copy{padding:.25rem .26rem}.intro-psd-title{width:100%}.intro-copy>.ornament{font-size:.65rem;gap:.28rem}.intro-copy>.ornament::before,.intro-copy>.ornament::after{width:1.35rem}.intro-copy>p{font-size:clamp(.68rem,2.25vw,.77rem);line-height:1.38;letter-spacing:.008em}}
 
+.intro-number-title { align-self:center; display:grid; justify-items:center; width:100%; font-family:'Bodoni MT',Didot,Georgia,serif; line-height:.93; text-align:center; text-transform:uppercase; }
+.intro-number-title span,.intro-number-title strong { color:#e7c8ff; font-weight:400; letter-spacing:.07em; text-shadow:0 0 7px rgba(204,111,255,.55); }
+.intro-number-title span { font-size:clamp(.88rem,2.1vw,1.3rem); }
+.intro-number-title strong { margin-top:.28rem; font-size:clamp(1.12rem,2.7vw,1.75rem); white-space:nowrap; }
+@media(max-width:640px){.intro-number-title span{font-size:.72rem}.intro-number-title strong{font-size:.9rem;letter-spacing:.025em}}
+
 /* 70% glass body with a polished luminous rim; number styling stays original. */
 .countdown-card {
   border-color:rgba(242,218,255,.72);
@@ -157,3 +163,24 @@
   backdrop-filter:blur(14px) saturate(135%);
   -webkit-backdrop-filter:blur(14px) saturate(135%);
 }
+
+/* Music card mirrors the countdown rim with a slightly clearer 65% glass body. */
+.music-card { border-color:rgba(242,218,255,.72); background:linear-gradient(145deg,rgba(111,53,166,.27),rgba(28,7,65,.65) 42%,rgba(12,3,41,.65)); box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 0 16px rgba(207,142,255,.12),0 0 0 1px rgba(216,169,255,.15),0 0 10px rgba(217,151,255,.36),0 0 24px rgba(146,65,224,.20),0 14px 35px rgba(2,0,20,.38); backdrop-filter:blur(14px) saturate(135%); -webkit-backdrop-filter:blur(14px) saturate(135%); }
+.music-heading { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:.55rem; }
+.music-heart { display:flex; align-items:center; gap:.42rem; color:#f6dcff; text-shadow:0 0 3px rgba(255,255,255,.65),0 0 8px rgba(198,91,255,.52); }
+.music-heart--left { justify-content:flex-end; }
+.music-heart--right { justify-content:flex-start; }
+.music-heart::before,.music-heart::after { content:''; display:none; width:clamp(1.2rem,3vw,2.4rem); height:1px; background:linear-gradient(90deg,transparent,rgba(245,224,255,.56),rgba(255,255,255,.96),rgba(193,125,239,.52)); box-shadow:0 0 5px rgba(192,94,255,.38); }
+.music-heart--left::before,.music-heart--right::after { display:block; }
+.album-heart { overflow:visible; border:0; border-radius:0; background:none; box-shadow:none; }
+.album-heart img { display:block; width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 0 7px rgba(174,69,255,.38)); }
+.buttons button { display:grid; place-items:center; padding:0; }
+.buttons .play { position:relative; border-radius:50%; background:none; box-shadow:none; }
+.buttons .play img { width:100%; height:100%; object-fit:contain; }
+.buttons .play.is-playing img { opacity:.28; }
+.buttons .play.is-playing::after { content:'❚❚'; position:absolute; inset:0; display:grid; place-items:center; color:#fff; font-size:.8rem; text-shadow:0 0 6px #c26fff; }
+.buttons .skip { width:28px; height:28px; }
+.buttons .skip img { width:100%; height:100%; object-fit:contain; }
+.buttons .skip--back img { transform:rotate(180deg); }
+.floating-heart { color:#f6dcff; text-shadow:0 0 3px rgba(255,255,255,.65),0 0 8px rgba(198,91,255,.52); }
+@media(max-width:640px){.music-heading{gap:.28rem}.music-heart{gap:.2rem}.music-heart::before,.music-heart::after{width:.75rem}.buttons .skip{width:22px;height:22px}}
