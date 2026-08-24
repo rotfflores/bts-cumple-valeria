@@ -8,7 +8,7 @@
     <title>Cumpleaños de Valeria</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mobile-fix.css" />
-    <link rel="stylesheet" href="full-page.css?v=20260824-player-opacity80" />
+    <link rel="stylesheet" href="full-page.css?v=20260824-gallery-lightbox" />
   </head>
   <body>
     <main class="invitation-page">
@@ -60,11 +60,10 @@
         <section class="glass-card gallery-card">
           <h2>♥ &nbsp; Mis momentos favoritos &nbsp; ♥</h2>
           <div class="gallery-grid">
-            <div class="gallery-scene curtains" aria-label="Escena violeta con cortinas"><span>✦</span></div>
-            <div class="gallery-scene heart-stage" aria-label="Corazón de neón"><span>♡</span></div>
-            <div class="gallery-scene candles" aria-label="Noche elegante con velas"><span>♨</span></div>
+            <button class="gallery-scene" type="button" data-gallery-src="public/moment-curtains.png" aria-label="Ampliar escena violeta con cortinas"><img src="public/moment-curtains.png" alt="Cortinas violetas iluminadas con una esfera de espejos" /></button>
+            <button class="gallery-scene" type="button" data-gallery-src="public/moment-heart.png" aria-label="Ampliar corazón de cristal"><img src="public/moment-heart.png" alt="Corazón violeta de cristal sobre agua estrellada" /></button>
+            <button class="gallery-scene" type="button" data-gallery-src="public/moment-candles.png" aria-label="Ampliar escena elegante con velas"><img src="public/moment-candles.png" alt="Candelabro y flores violetas sobre tela elegante" /></button>
           </div>
-          <div class="gallery-dots"><b></b><b class="active"></b><b></b></div>
         </section>
 
         <section class="glass-card itinerary-card">
@@ -109,6 +108,10 @@
         </footer>
       </div>
     </main>
-    <script src="script.js?v=20260824-player-scale75"></script>
+    <div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar imagen">×</button>
+      <img id="lightboxImage" src="" alt="" />
+    </div>
+    <script src="script.js?v=20260824-gallery-lightbox"></script>
   </body>
 </html>

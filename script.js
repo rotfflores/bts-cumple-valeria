@@ -67,3 +67,44 @@ document.querySelector('#songForm').addEventListener('submit', (event) => {
 document.querySelector('#rsvpButton').addEventListener('click', () => {
   document.querySelector('#rsvpStatus').textContent = '¡Gracias! Tu confirmación quedó registrada ♥';
 });
+
+const galleryLightbox = document.querySelector('#galleryLightbox');
+const lightboxImage = document.querySelector('#lightboxImage');
+const lightboxClose = document.querySelector('#lightboxClose');
+let lightboxTimer;
+
+function openGalleryImage(button) {
+  clearTimeout(lightboxTimer);
+  const preview = button.querySelector('img');
+  lightboxImage.src = button.dataset.gallerySrc;
+  lightboxImage.alt = preview.alt;
+  galleryLightbox.classList.remove('is-closing');
+  galleryLightbox.classList.add('is-open');
+  galleryLightbox.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('lightbox-open');
+  lightboxClose.focus();
+}
+
+function closeGalleryImage() {
+  if (!galleryLightbox.classList.contains('is-open')) return;
+  galleryLightbox.classList.remove('is-open');
+  galleryLightbox.classList.add('is-closing');
+  galleryLightbox.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('lightbox-open');
+  lightboxTimer = setTimeout(() => {
+    galleryLightbox.classList.remove('is-closing');
+    lightboxImage.src = '';
+  }, 420);
+}
+
+document.querySelectorAll('[data-gallery-src]').forEach((button) => {
+  button.addEventListener('click', () => openGalleryImage(button));
+});
+
+lightboxClose.addEventListener('click', closeGalleryImage);
+galleryLightbox.addEventListener('click', (event) => {
+  if (event.target === galleryLightbox) closeGalleryImage();
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeGalleryImage();
+});
