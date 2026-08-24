@@ -8,7 +8,7 @@
     <title>Cumpleaños de Valeria</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mobile-fix.css?v=20260824-ios-overflow-fix" />
-    <link rel="stylesheet" href="full-page.css?v=20260824-final-controls-neon" />
+    <link rel="stylesheet" href="full-page.css?v=20260824-unified-buttons-inputs" />
   </head>
   <body>
     <main class="invitation-page">
@@ -82,7 +82,7 @@
             <div><h2>Dress code</h2><p>Elegante •<br />Tonos negro, blanco o morado</p></div>
           </section>
           <section class="glass-card mini-card venue-card">
-            <div><h2>Ceremonia</h2><p>Salón Nápoles • 7:00 PM</p><a class="pill-button venue-button" href="https://www.google.com/maps/search/?api=1&amp;query=Sal%C3%B3n+N%C3%A1poles%2C+Av.+Insurgentes+Sur+1027%2C+CDMX" target="_blank" rel="noreferrer"><span aria-hidden="true">⌖</span> Ver ubicación</a></div>
+            <div><h2>Ceremonia</h2><p>Salón Nápoles • 7:00 PM</p><a class="pill-button venue-button" href="https://www.google.com/maps/search/?api=1&amp;query=Sal%C3%B3n+N%C3%A1poles%2C+Av.+Insurgentes+Sur+1027%2C+CDMX" target="_blank" rel="noreferrer">Ver ubicación</a></div>
             <div class="ceremony-visual" aria-hidden="true"><img src="public/ceremony-moon.png" alt="" /></div>
           </section>
           <section class="glass-card mini-card gift-card">
@@ -91,13 +91,13 @@
           </section>
           <section class="glass-card mini-card song-card">
             <h2>¿Qué canción no puede faltar?</h2>
-            <form id="songForm"><label><span class="sr-only">Nombre de la canción</span><input id="songInput" placeholder="Escribe tu canción aquí..." /></label><button class="pill-button" type="submit">Enviar canción &nbsp; ♥</button><small id="songStatus" role="status"></small></form>
+            <form id="songForm"><label><span class="sr-only">Nombre de la canción</span><input id="songInput" placeholder="Escribe tu canción aquí..." /></label><button class="pill-button" type="submit">Enviar canción</button><small id="songStatus" role="status"></small></form>
           </section>
         </div>
 
         <section class="glass-card rsvp-card">
           <div class="envelope" aria-hidden="true">✉</div>
-          <div class="rsvp-content"><p>Confirma tu asistencia</p><h2>RSVP</h2><button class="pill-button rsvp-toggle" id="rsvpButton" type="button" aria-expanded="false" aria-controls="rsvpFormPanel"><span>Confirmar asistencia</span><b aria-hidden="true">♥</b></button><div class="rsvp-form-panel" id="rsvpFormPanel"><form id="rsvpForm"><label>Nombre completo<input id="guestName" name="guestName" autocomplete="name" required placeholder="Escribe tu nombre" /></label><div class="rsvp-fields"><label>Asistencia<select id="attendance" name="attendance"><option value="Sí asistiré">Sí asistiré</option><option value="No podré asistir">No podré asistir</option></select></label><label>Invitados<input id="guestCount" name="guestCount" type="number" min="1" max="10" value="2" /></label></div><button class="pill-button rsvp-submit" type="submit">Enviar confirmación &nbsp; ♥</button></form></div><small id="rsvpStatus" role="status"></small></div>
+          <div class="rsvp-content"><p>Confirma tu asistencia</p><h2>RSVP</h2><button class="pill-button rsvp-toggle" id="rsvpButton" type="button" aria-expanded="false" aria-controls="rsvpFormPanel"><span>Confirmar asistencia</span></button><div class="rsvp-form-panel" id="rsvpFormPanel"><form id="rsvpForm"><label>Nombre completo<input id="guestName" name="guestName" autocomplete="name" required placeholder="Escribe tu nombre" /></label><div class="rsvp-fields"><label>Asistencia<select id="attendance" name="attendance"><option value="Sí asistiré">Sí asistiré</option><option value="No podré asistir">No podré asistir</option></select></label><label>Invitados<input id="guestCount" name="guestCount" type="number" min="1" max="10" value="2" /></label></div><button class="pill-button rsvp-submit" type="submit">Enviar confirmación</button></form></div><small id="rsvpStatus" role="status"></small></div>
         </section>
 
         <footer class="invitation-footer">
