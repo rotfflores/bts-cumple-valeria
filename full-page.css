@@ -116,14 +116,12 @@
 
 /* Solid portal with a soft atmospheric dissolve at both lower corners. */
 .portal-image {
-  opacity:.96;
+  height:auto;
+  min-height:0;
+  object-fit:contain;
+  opacity:1;
   mix-blend-mode:normal;
-  -webkit-mask-image:
-    radial-gradient(ellipse 62% 48% at 0% 100%,transparent 0 15%,rgba(0,0,0,.22) 37%,#000 68%),
-    radial-gradient(ellipse 62% 48% at 100% 100%,transparent 0 15%,rgba(0,0,0,.22) 37%,#000 68%);
-  -webkit-mask-composite:source-in;
-  mask-image:
-    radial-gradient(ellipse 62% 48% at 0% 100%,transparent 0 15%,rgba(0,0,0,.22) 37%,#000 68%),
-    radial-gradient(ellipse 62% 48% at 100% 100%,transparent 0 15%,rgba(0,0,0,.22) 37%,#000 68%);
-  mask-composite:intersect;
+  -webkit-mask-image:none;
+  mask-image:none;
 }
+@media(max-width:640px){.portal-image{height:auto;min-height:0;object-fit:contain}}
