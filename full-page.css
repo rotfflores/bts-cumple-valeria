@@ -113,11 +113,15 @@
   filter:none;
 }
 @media(max-width:640px){.intro-crystal-title-image{width:84%;margin-bottom:.1rem}}
+.intro-elegant-title { display:grid; justify-items:center; margin:0 auto .15rem; font-family:'Bodoni MT',Didot,'Times New Roman',serif; line-height:.92; text-align:center; text-transform:uppercase; }
+.intro-elegant-title span,.intro-elegant-title strong { color:transparent; background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(243,220,255,.72) 24%,rgba(211,157,244,.56) 54%,rgba(255,244,255,.88) 78%,rgba(185,112,226,.62) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; text-shadow:0 1px 0 rgba(255,255,255,.18),0 2px 3px rgba(30,0,52,.42); }
+.intro-elegant-title span { font-size:clamp(.76rem,1.8vw,1.12rem); font-weight:400; letter-spacing:.15em; }
+.intro-elegant-title strong { margin-top:.2rem; font-size:clamp(1rem,2.55vw,1.65rem); font-weight:400; letter-spacing:.08em; }
 
 /* Solid portal with a soft atmospheric dissolve at both lower corners. */
 .portal-image {
-  width:132%;
-  max-width:none;
+  width:100%;
+  max-width:100%;
   height:auto;
   min-height:0;
   object-fit:contain;
@@ -131,5 +135,6 @@
   -webkit-mask-image:none;
   mask-image:none;
 }
+.intro-card { grid-template-columns:46% 54%; }
 .magic-door { place-items:end start; background:transparent; }
-@media(max-width:640px){.portal-image{width:138%;height:auto;min-height:0;object-fit:contain;object-position:left bottom}}
+@media(max-width:640px){.intro-card{grid-template-columns:47% 53%}.portal-image{width:100%;max-width:100%;height:auto;min-height:0;object-fit:contain;object-position:left bottom}.intro-elegant-title span{font-size:.62rem}.intro-elegant-title strong{font-size:.82rem}}
