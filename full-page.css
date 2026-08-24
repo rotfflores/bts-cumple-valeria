@@ -121,7 +121,9 @@
   object-fit:contain;
   opacity:1;
   mix-blend-mode:normal;
+  filter:none;
   -webkit-mask-image:none;
   mask-image:none;
 }
+.magic-door { background:transparent; }
 @media(max-width:640px){.portal-image{height:auto;min-height:0;object-fit:contain}}
