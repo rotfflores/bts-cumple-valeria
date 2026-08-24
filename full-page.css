@@ -169,10 +169,10 @@
 
 /* Favorite moments: supplied artwork, 90% glass and animated full-screen viewer. */
 .gallery-card { border-color:rgba(242,218,255,.72); background:linear-gradient(145deg,rgba(111,53,166,.97),rgba(28,7,65,.97) 42%,rgba(12,3,41,.97)); box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 0 16px rgba(207,142,255,.12),0 0 0 1px rgba(216,169,255,.15),0 0 10px rgba(217,151,255,.36),0 0 24px rgba(146,65,224,.20),0 14px 35px rgba(2,0,20,.38); backdrop-filter:blur(14px) saturate(135%); -webkit-backdrop-filter:blur(14px) saturate(135%); }
-.gallery-scene { display:block; width:100%; min-height:0; aspect-ratio:1238/1271; padding:0; border:0; border-radius:clamp(9px,2vw,15px); background:transparent; box-shadow:0 0 9px rgba(206,112,255,.30); cursor:zoom-in; transition:transform .3s ease,box-shadow .3s ease; }
+.gallery-scene { display:block; width:100%; min-height:0; aspect-ratio:1238/1271; padding:0; overflow:hidden; border:0; border-radius:clamp(9px,2vw,15px); background:transparent; box-shadow:none; cursor:zoom-in; transition:transform .3s ease,filter .3s ease; }
 .gallery-scene:hover,.gallery-scene:focus-visible { transform:translateY(-3px) scale(1.015); box-shadow:0 0 13px rgba(222,158,255,.56),0 8px 24px rgba(5,0,28,.36); outline:none; }
-.gallery-scene img { display:block; width:100%; height:100%; object-fit:fill; object-position:center; border-radius:inherit; }
-.gallery-scene:nth-child(2) img { transform:scaleX(1.25); transform-origin:center; }
+.gallery-scene img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; border-radius:inherit; transform:scale(1); transform-origin:center; }
+.gallery-scene:nth-child(2) img { transform:scale(1.25); }
 .gallery-lightbox { position:fixed; z-index:1000; inset:0; display:grid; place-items:center; padding:clamp(18px,4vw,52px); background:rgba(45,10,91,.42); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); visibility:hidden; opacity:0; pointer-events:none; transition:opacity .32s ease,visibility 0s linear .32s; }
 .gallery-lightbox.is-open { visibility:visible; opacity:1; pointer-events:auto; transition:opacity .32s ease; }
 .gallery-lightbox.is-closing { visibility:visible; opacity:0; pointer-events:none; }
