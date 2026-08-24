@@ -1,6 +1,6 @@
 .hero-image {
   display: block;
-  width: 100vw !important;
+  width: 100% !important;
   max-width: 100% !important;
   height: auto !important;
   object-fit: contain;
@@ -47,8 +47,10 @@
 }
 
 @media (max-width: 760px) {
-  html, body, .invitation-page, .invitation-hero { width: 100%; max-width: 100vw; overflow-x: clip; }
-  .hero-image { width: 100vw !important; max-width: 100vw !important; }
+  html, body { width:100%; max-width:100%; overflow-x:hidden; overscroll-behavior-x:none; }
+  body { position:relative; }
+  .invitation-page, .invitation-hero { width:100%; max-width:100%; overflow-x:clip; }
+  .hero-image { width:100% !important; max-width:100% !important; }
   .invitation-copy { top: 24.5%; }
   .date-card--hero { bottom:2.8%; width:44%; min-width:0; padding:.2rem .35rem; }
   .date-card--hero::after { inset:2px 20% auto; }
