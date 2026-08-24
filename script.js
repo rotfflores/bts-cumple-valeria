@@ -69,12 +69,25 @@ const rsvpButton = document.querySelector('#rsvpButton');
 const rsvpForm = document.querySelector('#rsvpForm');
 const rsvpFormPanel = document.querySelector('#rsvpFormPanel');
 const rsvpStatus = document.querySelector('#rsvpStatus');
+let rsvpPanelTimer;
 
 rsvpButton.addEventListener('click', () => {
   const expanded = rsvpCard.classList.toggle('is-expanded');
   rsvpButton.setAttribute('aria-expanded', String(expanded));
   rsvpButton.querySelector('span').textContent = expanded ? 'Cerrar formulario' : 'Confirmar asistencia';
-  rsvpFormPanel.style.maxHeight = expanded ? `${rsvpFormPanel.scrollHeight + 24}px` : '0px';
+  clearTimeout(rsvpPanelTimer);
+  if (expanded) {
+    rsvpFormPanel.style.overflow = 'hidden';
+    rsvpFormPanel.style.maxHeight = `${rsvpFormPanel.scrollHeight + 24}px`;
+    rsvpPanelTimer = setTimeout(() => {
+      rsvpFormPanel.style.maxHeight = 'none';
+      rsvpFormPanel.style.overflow = 'visible';
+    }, 620);
+  } else {
+    rsvpFormPanel.style.maxHeight = `${rsvpFormPanel.scrollHeight}px`;
+    rsvpFormPanel.style.overflow = 'hidden';
+    requestAnimationFrame(() => { rsvpFormPanel.style.maxHeight = '0px'; });
+  }
   rsvpFormPanel.style.opacity = expanded ? '1' : '0';
   rsvpFormPanel.style.transform = expanded ? 'translateY(0)' : 'translateY(-10px)';
   rsvpStatus.textContent = '';
