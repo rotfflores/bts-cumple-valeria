@@ -165,7 +165,7 @@
 }
 
 /* Music card mirrors the countdown rim with a slightly clearer 65% glass body. */
-.music-card { border-color:rgba(242,218,255,.72); background:linear-gradient(145deg,rgba(111,53,166,.27),rgba(28,7,65,.65) 42%,rgba(12,3,41,.65)); box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 0 16px rgba(207,142,255,.12),0 0 0 1px rgba(216,169,255,.15),0 0 10px rgba(217,151,255,.36),0 0 24px rgba(146,65,224,.20),0 14px 35px rgba(2,0,20,.38); backdrop-filter:blur(14px) saturate(135%); -webkit-backdrop-filter:blur(14px) saturate(135%); }
+.music-card { border-color:rgba(242,218,255,.72); background:linear-gradient(145deg,rgba(111,53,166,.32),rgba(28,7,65,.75) 42%,rgba(12,3,41,.75)); box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 0 16px rgba(207,142,255,.12),0 0 0 1px rgba(216,169,255,.15),0 0 10px rgba(217,151,255,.36),0 0 24px rgba(146,65,224,.20),0 14px 35px rgba(2,0,20,.38); backdrop-filter:blur(14px) saturate(135%); -webkit-backdrop-filter:blur(14px) saturate(135%); }
 .music-heading { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:.55rem; }
 .music-heart { display:flex; align-items:center; gap:.42rem; color:#f6dcff; text-shadow:0 0 3px rgba(255,255,255,.65),0 0 8px rgba(198,91,255,.52); }
 .music-heart--left { justify-content:flex-end; }
@@ -184,3 +184,10 @@
 .buttons .skip--back img { transform:rotate(180deg); }
 .floating-heart { color:#f6dcff; text-shadow:0 0 3px rgba(255,255,255,.65),0 0 8px rgba(198,91,255,.52); }
 @media(max-width:640px){.music-heading{gap:.28rem}.music-heart{gap:.2rem}.music-heart::before,.music-heart::after{width:.75rem}.buttons .skip{width:22px;height:22px}}
+
+.music-player { grid-template-columns:clamp(104px,18vw,138px) 1fr clamp(30px,5vw,42px); align-items:stretch; min-height:124px; }
+.album-heart { width:100%; height:100%; min-height:124px; aspect-ratio:auto; align-self:stretch; }
+.player-controls,.floating-heart { align-self:center; }
+.buttons .play { width:58px; height:58px; }
+.buttons .skip { width:40px; height:40px; }
+@media(max-width:640px){.music-player{grid-template-columns:88px 1fr 28px;min-height:96px;gap:.45rem}.album-heart{width:100%;height:100%;min-height:96px}.buttons{gap:.8rem}.buttons .play{width:48px;height:48px}.buttons .skip{width:32px;height:32px}}
