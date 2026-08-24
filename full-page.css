@@ -113,10 +113,10 @@
   filter:none;
 }
 @media(max-width:640px){.intro-crystal-title-image{width:84%;margin-bottom:.1rem}}
-.intro-elegant-title { display:grid; justify-items:center; margin:0 auto .15rem; font-family:'Bodoni MT',Didot,'Times New Roman',serif; line-height:.92; text-align:center; text-transform:uppercase; }
-.intro-elegant-title span,.intro-elegant-title strong { color:transparent; background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(243,220,255,.82) 24%,rgba(211,157,244,.70) 54%,rgba(255,244,255,.92) 78%,rgba(185,112,226,.74) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; text-shadow:none; filter:none; }
-.intro-elegant-title span { font-size:clamp(.76rem,1.8vw,1.12rem); font-weight:400; letter-spacing:.15em; }
-.intro-elegant-title strong { margin-top:.2rem; font-size:clamp(1rem,2.55vw,1.65rem); font-weight:400; letter-spacing:.08em; }
+.intro-elegant-title { display:grid; justify-items:center; margin:0 auto .2rem; font-family:Georgia,'Times New Roman',serif; line-height:.94; text-align:center; text-transform:uppercase; text-rendering:geometricPrecision; -webkit-font-smoothing:antialiased; }
+.intro-elegant-title span,.intro-elegant-title strong { color:#ead7f7; background:linear-gradient(180deg,#fff 0%,#f2ddff 31%,#cfa4e9 62%,#f8efff 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; text-shadow:none; filter:none; }
+.intro-elegant-title span { font-size:clamp(.84rem,1.95vw,1.22rem); font-weight:400; letter-spacing:.16em; }
+.intro-elegant-title strong { margin-top:.28rem; font-size:clamp(1.02rem,2.35vw,1.55rem); font-weight:400; letter-spacing:.055em; white-space:nowrap; }
 
 /* Solid portal with a soft atmospheric dissolve at both lower corners. */
 .portal-image {
@@ -137,4 +137,4 @@
 }
 .intro-card { grid-template-columns:46% 54%; padding:1.3rem 1.3rem 0 0; }
 .magic-door { place-items:end start; background:transparent; }
-@media(max-width:640px){.intro-card{grid-template-columns:47% 53%;padding:.7rem .7rem 0 0}.portal-image{width:100%;max-width:100%;height:auto;min-height:0;object-fit:contain;object-position:left bottom}.intro-elegant-title span{font-size:.62rem}.intro-elegant-title strong{font-size:.82rem}}
+@media(max-width:640px){.intro-card{grid-template-columns:47% 53%;padding:.7rem .7rem 0 0}.portal-image{width:100%;max-width:100%;height:auto;min-height:0;object-fit:contain;object-position:left bottom}.intro-elegant-title span{font-size:.66rem}.intro-elegant-title strong{font-size:.73rem;letter-spacing:.025em}}
